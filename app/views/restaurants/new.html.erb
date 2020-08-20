@@ -1,0 +1,9 @@
+<%= simple_form_for @restaurant do |f| %>
+  
+  <%= f.input :name %>
+  <%= f.input :street %>
+  <%= f.input :city %>
+  <%= f.input :country, as: :string %>
+
+  <%= f.submit %>
+<% end %>
