@@ -6,8 +6,11 @@ address = {
   country: "Brazil"
 }
 
-Restaurant.create! name: "Amareleen", **address
-Restaurant.create! name: "Verdeen", **address
+[
+  { name: "Amareleen", **address },
+  { name: "Verdeen", **address }
+].each(&Restaurant.method(:new))
+
 
 puts "Let's drink a beer"
 puts %{
